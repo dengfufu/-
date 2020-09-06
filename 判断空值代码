@@ -1,0 +1,9 @@
+判断空值代码：
+
+// const lastEngineerGoList = this.work.goList[this.work.goList.length - 1];
+// this.navigateMapFileList = this.listNavigateMapFile(lastEngineerGoList.fileInfo.fileId);
+if (this.work.goList && this.work.goList.length) {
+          const lastEngineerGoList = this.work.goList[this.work.goList.length - 1];
+          const fileId = lastEngineerGoList && lastEngineerGoList.fileInfo ? lastEngineerGoList.fileInfo.fileId : '0';
+          this.navigateMapFileList = this.listNavigateMapFile(fileId);
+        }
